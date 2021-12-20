@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import PetItem from './PetItem';
 
-export default function PetsList(props) {
+function PetsList(props) {
   const [query, setQuery] = useState('');
   const [type, setType] = useState('');
   const [petsData, setPetsData] = useState(props.pets);
-  const handleDelete = (petId) =>
+  const handleAdopt = (petId) =>
     setPetsData(petsData.filter((pet) => pet.id !== petId));
   const pets = petsData
     .filter(
@@ -14,7 +14,7 @@ export default function PetsList(props) {
         pet.type.includes(type)
     )
     .map((pet) => (
-      <PetItem key={pet.id} pet={pet} handleDelete={handleDelete} />
+      <PetItem key={pet.id} pet={pet} handleAdopt={handleAdopt} />
     ));
   return (
     <section id="doctors" class="doctor-section pt-140">
@@ -58,3 +58,4 @@ export default function PetsList(props) {
     </section>
   );
 }
+export default PetsList
