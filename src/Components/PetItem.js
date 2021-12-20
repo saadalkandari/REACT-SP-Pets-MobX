@@ -10,10 +10,10 @@ export default function PetItem(props) {
             type="button"
             class="btn btn-info"
             onClick={() => {
-              props.handleDelete(pet.id);
+              props.handleAdopt(pet.id);
             }}
           >
-            Delete
+            Adopt
           </button>
         </div>
       </div>
