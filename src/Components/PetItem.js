@@ -1,3 +1,4 @@
+import petStore from '../petStore';
 export default function PetItem(props) {
   const pet = props.pet;
   return (
@@ -9,11 +10,9 @@ export default function PetItem(props) {
           <button
             type="button"
             class="btn btn-info"
-            onClick={() => {
-              props.handleDelete(pet.id);
-            }}
+            onClick={() => petStore.handleAdopt(pet.id)}
           >
-            Delete
+            Adopt
           </button>
         </div>
       </div>
