@@ -96,7 +96,7 @@ handleAdopt = (petId) => {
 ```javascript
 <button
   type="button"
-  class="btn btn-info"
+  className="btn btn-info"
   onClick={() => petStore.handleAdopt(pet.id)}
 >
   Adopt
