@@ -4,25 +4,27 @@ Fork and clone [this repo](https://github.com/JoinCODED/REACT-SP-Pets-MobX) into
 
 ### Mobx
 
-1. `npm install mobx mobx-react`
-2. Create a file called `petStore` in `src`
-3. Define the `pets` class and inside create an empty array `pets= []`.
-4. Import our data file in the store and set the inital value of the pets array to out pets data.
+1. Install Mobx `npm install mobx mobx-react`.
+2. Create a file called `petStore` in `src`.
+3. Define the `PetStore` class and inside create an empty array `pets= []`.
+4. Import our data file in the store and set the initial value of the pets array to out pets data.
 5. `import { makeObservable, observable, action } from "mobx";`.
 6. Make a `constructor` that will make this a store and mark `pets` as an observable.
-7. Create a store and export it
+7. Create a store and export it.
 
-### Using the store.
+### Using the Store
 
-1. Instead of getting our pets list from our `petsData` file, we will now get it from our store. In `PetsList.js` import `petStore` and replace the data coming from props with our store.
+Instead of getting our pets list from our `petsData` file, we will now get it from our store.
 
-### Adopting a pet.
+1. In `PetsList.js` import `petStore` and replace the data coming from props with our store.
 
-1. We will move our adopt function to the store so we can access it anywere in our app. Move the function to the store.
+### Adopting a Pet
+
+1. We will move our adopt function to the store so we can access it anywhere in our app. Move the function to the store.
 2. Mark this functions as an action in the constructor.
-3. In `PetItem.js` import our store and replace the fuction thats coming from props to our function that we did in the store.
+3. In `PetItem.js` import our store and replace the function that's coming from props to our function that we did in the store.
 
-### Not observing the change?
+### Not Observing the Change?
 
 1. There's a component that needs to be marked as an observer, can you know which one it is and mark it as an observer?
 2. Don't forget to `import { observer } from "mobx-react";`.
