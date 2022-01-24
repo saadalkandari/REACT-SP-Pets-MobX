@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
-import PetItem from './PetItem';
+import React, { useState } from "react";
+import PetItem from "./PetItem";
 
-function PetsList(props) {
-  const [query, setQuery] = useState('');
-  const [type, setType] = useState('');
-  const [petsData, setPetsData] = useState(props.pets);
+function PetsList({ petsData }) {
+  const [query, setQuery] = useState("");
+  const [type, setType] = useState("");
+  const [pets, setPets] = useState(petsData);
+
   const handleAdopt = (petId) =>
-    setPetsData(petsData.filter((pet) => pet.id !== petId));
-  const pets = petsData
+    setPets(pets.filter((pet) => pet.id !== petId));
+
+  const petList = pets
     .filter(
       (pet) =>
         pet.name.toLowerCase().includes(query.toLowerCase()) &&
         pet.type.includes(type)
     )
-    .map((pet) => (
-      <PetItem key={pet.id} pet={pet} handleAdopt={handleAdopt} />
-    ));
+    .map((pet) => <PetItem key={pet.id} pet={pet} handleAdopt={handleAdopt} />);
   return (
     <section id="doctors" class="doctor-section pt-140">
       <div class="container">
@@ -53,9 +53,9 @@ function PetsList(props) {
           </div>
         </div>
 
-        <div class="row justify-content-center">{pets}</div>
+        <div class="row justify-content-center">{petList}</div>
       </div>
     </section>
   );
 }
-export default PetsList
+export default PetsList;

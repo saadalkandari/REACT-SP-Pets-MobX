@@ -1,5 +1,4 @@
-export default function PetItem(props) {
-  const pet = props.pet;
+export default function PetItem({ pet, handleAdopt }) {
   return (
     <div class="col-lg-4 col-md-8 col-sm-10">
       <div class="single-doctor">
@@ -9,9 +8,7 @@ export default function PetItem(props) {
           <button
             type="button"
             class="btn btn-info"
-            onClick={() => {
-              props.handleAdopt(pet.id);
-            }}
+            onClick={() => handleAdopt(pet.id)}
           >
             Adopt
           </button>
