@@ -1,3 +1,7 @@
+### Steps
+
+Fork and clone [this repo](https://github.com/JoinCODED/REACT-SP-Pets-MobX) into your `Development` folder
+
 ### Mobx
 
 1. `npm install mobx mobx-react`
