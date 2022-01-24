@@ -21,8 +21,7 @@ Instead of getting our pets list from our `petsData` file, we will now get it fr
 ### Adopting a Pet
 
 1. We will move our adopt function to the store so we can access it anywhere in our app. Move the function to the store.
-2. Mark this functions as an action in the constructor.
-3. In `PetItem.js` import our store and replace the function that's coming from props to our function that we did in the store.
+2. In `PetItem.js` import our store and replace the function that's coming from props to our function that we did in the store.
 
 ### Not Observing the Change?
 
